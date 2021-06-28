@@ -1,0 +1,34 @@
+<?hh // strict
+// @format
+
+final class Bill722 extends ScriptController {
+
+  <<__Override>>
+  protected static function getDescription(): string {
+    return "Calculate utility bill for 722.\n";
+  }
+
+  <<__Override>>
+  final protected async function genRun(): Awaitable<int> {
+    $utility = new Utility722();
+    PHP\print_r("The user name are:. Please select one.");
+    PHP\print_r($utility->getResidentNames());
+    $id = (int)PHP\fgets(STDIN);
+    if ($id < 0 || $id >= C\count($utility->getResidentNames())) {
+      cecho("Wrong selection! %d", $id);
+      return 1;
+    }
+    $name = $utility->getResidentNames()[$id];
+    cecho("Below are utility bill for %s\n", $name);
+    $elect = $utility->getTotalBillForResident($name, UtilityBillType::Elec);
+    $water = $utility->getTotalBillForResident($name, UtilityBillType::Water);
+    PHP\print_r("\nElectricity:\n");
+    PHP\print_r($elect);
+    PHP\print_r("\nWater:\n");
+    PHP\print_r($water);
+    PHP\print_r("\nTotal:\n");
+    PHP\print_r($water + $elect);
+    return 0;
+  }
+
+}
