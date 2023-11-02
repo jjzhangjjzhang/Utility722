@@ -12,11 +12,15 @@ class Bill722:
         print("The user name are:. Please select one.")
         print(utility.residents.keys())
         resident_names = list(utility.residents.keys())
-        id = int(input())
-        if id < 0 or id >= len(resident_names):
-            print("Wrong selection! {}".format(id))
+        # id = int(input())
+        # if id < 0 or id >= len(resident_names):
+        #     print("Wrong selection! {}".format(id))
+        #     exit
+        # name = resident_names[id]
+        name = input()
+        if name not in resident_names:
+            print("invalid name")
             exit
-        name = resident_names[id]
         print("Below are utility bill for {}\n".format(name))
         elect = utility.get_total_bill_for_resident(name, UtilityBillType.Elec)
         water = utility.get_total_bill_for_resident(
