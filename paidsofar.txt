@@ -1,4 +1,11 @@
+Previous
 Laoli: 3525.5946
 kl:317.24
 junyi:286.37
 lihaoyang:102.117
+
+New paid total
+Laoli: 4190.21959056742
+kl:981.8659511648751
+junyi:950.9952844982083
+lihaoyang:766.7422499999993
