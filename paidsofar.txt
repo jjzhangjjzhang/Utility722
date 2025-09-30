@@ -13,8 +13,12 @@ lihaoyang:766.7422499999993
 paid
 
 12/19/2024
-Kl:1503
-Junyi: 1666
-Lihaoyang:1482
+Kl:1649
+Junyi: 1618
+Lihaoyang:1433
 
-Jan 14, 2025 @ 11:25:35.285
+sept 29, 2025 @ 11:25:35.285
+junyi: 2370
+kl: 2400
+haoyang: 2185
+feixiang: 682.86
